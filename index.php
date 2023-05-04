@@ -6,7 +6,12 @@ require_once './db.php';
 $products = [
     $dogKibbles,
     $catKibbles,
-    $catToy
+    $catToy,
+    $dogsKennel,
+    $catKennel,
+    $catKennel2,
+    $toyBall,
+    $meatCats
 ];
 
 
@@ -43,11 +48,11 @@ $shopName = $animalShop->name;
             </h2>
 
 
-            <div class="d-flex gap-5">
+            <div class="d-flex flex-wrap gap-5">
                 <?php foreach ($products as  $product) {
                 ?>
                     <div class="card" style="width: 18rem;">
-                        <img src="..." class="card-img-top" alt="...">
+                        <img src=<?php echo $product->imageProduct ?> class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">
                                 <?php echo $product->productName ?>

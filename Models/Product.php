@@ -10,8 +10,9 @@ class Product extends Shop
     public $discount = 0;
     public $animalGenre;
     public $typeProduct;
+    public $imageProduct;
 
-    function __construct(string $name, string $city, string $workingHours, string $productName, float $price, int $inventories, AnimalGenre $animalGenre, TypeProduct $typeProduct)
+    function __construct(string $name, string $city, string $workingHours, string $productName, float $price, int $inventories, AnimalGenre $animalGenre, TypeProduct $typeProduct, string $imageProduct)
     {
         parent::__construct($name, $city, $workingHours);
 
@@ -20,7 +21,7 @@ class Product extends Shop
         $this->inventories = $inventories;
         $this->animalGenre = $animalGenre;
         $this->typeProduct = $typeProduct;
-
+        $this->imageProduct = $imageProduct;
 
 
         $this->setDiscount();
