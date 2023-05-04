@@ -12,9 +12,9 @@ class Product extends Shop
     public $typeProduct;
     public $imageProduct;
 
-    function __construct(string $name, string $city, string $workingHours, string $productName, float $price, int $inventories, AnimalGenre $animalGenre, TypeProduct $typeProduct, string $imageProduct)
+    function __construct(string $name, string $city, string $workingHours, string $adress, string $productName, float $price, int $inventories, AnimalGenre $animalGenre, TypeProduct $typeProduct, string $imageProduct)
     {
-        parent::__construct($name, $city, $workingHours);
+        parent::__construct($name, $city, $workingHours, $adress);
 
         $this->productName = $productName;
         $this->price = $price;
