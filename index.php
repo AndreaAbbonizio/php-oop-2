@@ -75,12 +75,15 @@ $shopAdress = $animalShop->adress;
                             <li class="list-group-item">
                                 Prezzo: <strong><?php echo $product->price ?>€</strong>
                                 <br>
-                                Saldo: <strong><?php if ($product->discount > 0) {
-                                                    echo $product->discount . '%';
-                                                } else {
-                                                    echo 'Nessuno sconto';
+                                Saldo: <strong><?php
+
+                                                try {
+                                                    $product->setDiscount($product->inventories);
+                                                    echo $product->getDiscount();
+                                                } catch (Exception $e) {
+                                                    echo $e->getMessage();
                                                 }
-                                                ?>
+                                                ?>%
                                 </strong>
                             </li>
                             <li class="list-group-item">

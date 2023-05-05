@@ -3,9 +3,7 @@ require_once './Models/Shop.php';
 
 require_once './Models/Product.php';
 
-require_once './Models/AnimalGenre.php';
 
-require_once './Models/TypeProduct.php';
 
 
 $animalShop = new Shop('Animal Shop', 'Rome', '9:00 - 19:00', 'Via Palmiro Togliatti,101');
@@ -14,7 +12,7 @@ $animalShop = new Shop('Animal Shop', 'Rome', '9:00 - 19:00', 'Via Palmiro Togli
 
 $dogKibbles = new Product('Animal Shop', 'Rome', '9:00 - 19:00', 'Via Palmiro Togliatti,101', 'Croccantini per Cani', 10.50, 15, new AnimalGenre('Cani', '0 - 10kg'), new TypeProduct('Cibo', '1000 gr', 'Monge'), 'https://cdn.manomano.com/images/images_products/5040562/P/9531782_1.jpg');
 
-$catKibbles = new Product('Animal Shop', 'Rome', '9:00 - 19:00', 'Via Palmiro Togliatti,101', 'Croccantini per Gatti', 10.50, 7, new AnimalGenre('Gatti', '0 - 10kg'), new TypeProduct('Cibo', '1000 gr', 'Monge'), 'https://cdn.manomano.com/images/images_products/13100073/P/20106880_1.jpg');
+$catKibbles = new Product('Animal Shop', 'Rome', '9:00 - 19:00', 'Via Palmiro Togliatti,101', 'Croccantini per Gatti', 10.50, 1007, new AnimalGenre('Gatti', '0 - 10kg'), new TypeProduct('Cibo', '1000 gr', 'Monge'), 'https://cdn.manomano.com/images/images_products/13100073/P/20106880_1.jpg');
 
 
 $catToy = new Product('Animal Shop', 'Rome', '9:00 - 19:00', 'Via Palmiro Togliatti,101', 'Tiragraffi per Gatti', 47.90, 25, new AnimalGenre('Gatti', '0 - 20kg'), new TypeProduct('Gioco', '8,5 kg', 'Bakaji'), 'https://cdn.manomano.com/images/images_products/396180/P/1788113_1.jpg');

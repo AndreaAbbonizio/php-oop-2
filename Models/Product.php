@@ -1,13 +1,19 @@
 <?php
 
+require_once './Models/AnimalGenre.php';
+
+require_once './Models/TypeProduct.php';
+
+require_once __DIR__ . "/../Traits/Discounted.php";
+
 
 class Product extends Shop
 {
+    use Discounted;
     public $productName;
 
     public $price;
     public $inventories;
-    public $discount = 0;
     public $animalGenre;
     public $typeProduct;
     public $imageProduct;
@@ -22,15 +28,5 @@ class Product extends Shop
         $this->animalGenre = $animalGenre;
         $this->typeProduct = $typeProduct;
         $this->imageProduct = $imageProduct;
-
-
-        $this->setDiscount();
-    }
-
-    public function setDiscount()
-    {
-        if ($this->inventories > 10) {
-            $this->discount = 20;
-        }
     }
 }
